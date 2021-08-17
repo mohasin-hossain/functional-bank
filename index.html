@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Imaginary Bank</title>
+    <!-- Tailwind CSS -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="text-5xl text-center mt-16">
+        Welcome to
+        <span class="text-purple-600 font-semibold">Imaginary Bank</span>
+      </h1>
+    </header>
+
+    <main>
+      <section class="bg-purple-300 w-2/4 mx-auto mt-8 p-8 rounded shadow-lg">
+        <h3 class="text-2xl mb-4">Please Login</h3>
+        <div>
+          <input
+            id="user-email"
+            class="
+              border
+              rounded
+              border-gray-400
+              p-1
+              block
+              w-3/4
+              mb-4
+              outline-none
+            "
+            type="text"
+            name=""
+            placeholder="Your email"
+          />
+          <input
+            id="user-password"
+            class="
+              border
+              rounded
+              border-gray-400
+              p-1
+              block
+              w-3/4
+              mb-4
+              outline-none
+            "
+            type="password"
+            name=""
+            placeholder="Your password"
+          />
+          <button
+            id="login-submit"
+            class="
+              px-4
+              rounded
+              text-white
+              py-2
+              font-medium
+              bg-gradient-to-r
+              from-green-400
+              to-blue-500
+            "
+          >
+            Submit
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- JS -->
+    <script src="js/login.js"></script>
+  </body>
+</html>
