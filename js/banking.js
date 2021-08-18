@@ -12,9 +12,15 @@ function updateTotalField(totalFieldId, amount) {
   totalField.innerText = newTotal;
 }
 
-function updateBalance(amount, isAdd) {
+function getCurrentBalance() {
   const balanceTotal = document.getElementById("balance-total");
   const previousBalanceTotal = parseFloat(balanceTotal.innerText);
+  return previousBalanceTotal;
+}
+
+function updateBalance(amount, isAdd) {
+  const balanceTotal = document.getElementById("balance-total");
+  const previousBalanceTotal = getCurrentBalance();
   if (isAdd == true) {
     const newBalanceTotal = previousBalanceTotal + amount;
     balanceTotal.innerText = newBalanceTotal;
@@ -28,22 +34,29 @@ function updateBalance(amount, isAdd) {
 document
   .getElementById("deposit-button")
   .addEventListener("click", function () {
-    // Update Deposit total
+    // Get Deposit Amount
     const depositAmount = getInputValue("deposit-input");
-    updateTotalField("deposit-total", depositAmount);
 
-    // Update Account balance
-    updateBalance(depositAmount, true);
+    if (depositAmount > 0) {
+      // Update Account balance
+      updateTotalField("deposit-total", depositAmount);
+      updateBalance(depositAmount, true);
+    }
   });
 
 // Handle Withdraw button
 document
   .getElementById("withdraw-button")
   .addEventListener("click", function () {
-    // Update withdraw Total
+    // Get withdraw amount
     const withdrawAmount = getInputValue("withdraw-input");
-    updateTotalField("withdraw-total", withdrawAmount);
 
-    // Update Account Balance
-    updateBalance(withdrawAmount, false);
+    // Get Current Balance
+    const currentBalance = getCurrentBalance();
+
+    if (withdrawAmount > 0 && withdrawAmount < currentBalance) {
+      // Update Account Balance
+      updateTotalField("withdraw-total", withdrawAmount);
+      updateBalance(withdrawAmount, false);
+    }
   });
