@@ -13,25 +13,25 @@
   </head>
   <body>
     <header>
-      <h1 class="text-5xl text-center mt-16">
+      <h1 class="text-4xl lg:text-5xl text-center mt-6 lg:mt-16">
         Let's get some
         <span class="text-purple-600 font-semibold">Money!</span>
       </h1>
     </header>
 
-    <main class=" mx-auto w-3/4 ">
+    <main class=" mx-auto lg:w-3/4 ">
       <!-- Balance and Transaction -->
-      <section class="mt-12">
-        <div class="grid grid-cols-3 gap-4 text-white">
-          <div class="bg-blue-300 p-8 rounded">
+      <section class=" mt-8 lg:mt-12">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 md: gap-1 lg:gap-4 text-white">
+          <div class="bg-blue-300 p-2 md:p-8 rounded">
             <h3 class="text-2xl">Deposit</h3>
             <h4 class="text-4xl">$<span id="deposit-total">00</span></h4>
           </div>
-          <div class="bg-green-300 p-8 rounded">
+          <div class="bg-green-300 p-2 md:p-8 rounded">
             <h3 class="text-2xl">Withdraw</h3>
             <h4 class="text-4xl">$<span id="withdraw-total">00</span></h4>
           </div>
-          <div class="bg-yellow-300 p-8 rounded">
+          <div class="bg-yellow-300 p-2 md:p-8 rounded">
             <h3 class="text-2xl">Balance</h3>
             <h4 class="text-4xl">$ <span id="balance-total">200</span></h4>
           </div>
@@ -39,10 +39,10 @@
       </section>
 
       <!-- Deposit and Withdraw -->
-      <section class="mt-8">
-        <div class="grid grid-cols-2 gap-4">
-          <div class="bg-indigo-300 p-8 rounded">
-            <h3 class="text-3xl mb-4 text-white">Pleae Deposit</h3>
+      <section class="mt-4 md:mt-8">
+        <div class="grid grid-cols-2 gap-1 lg:gap-4">
+          <div class="bg-indigo-300 p-2 md:p-8 rounded">
+            <h3 class="text-xl md:text-3xl mb-4 text-white">Please Deposit</h3>
             <div>
               <input
                 id="deposit-input"
@@ -52,13 +52,13 @@
                   border-gray-400
                   p-1
                   block
-                  w-3/4
+                  w-full
                   mb-4
                   outline-none
                 "
                 type="text"
                 name=""
-                placeholder="$ amount you want to deposit"
+                placeholder="$ Enter amount"
               />
               <button
                 id="deposit-button"
@@ -77,8 +77,8 @@
               </button>
             </div>
           </div>
-          <div class="bg-purple-300 p-8 rounded">
-            <h3 class="text-3xl mb-4 text-white">Pleae Withdraw</h3>
+          <div class="bg-purple-300 p-3 md:p-8 rounded">
+            <h3 class="text-xl md:text-3xl mb-4 text-white">Please Withdraw</h3>
             <div>
               <input
                 id="withdraw-input"
@@ -88,13 +88,13 @@
                   border-gray-400
                   p-1
                   block
-                  w-3/4
+                  w-full
                   mb-4
                   outline-none
                 "
                 type="text"
                 name=""
-                placeholder="$ amount you want to withdraw"
+                placeholder="$ Enter amount"
               />
               <button
                 id="withdraw-button"
